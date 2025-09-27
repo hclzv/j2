@@ -1,10 +1,12 @@
-from flask import Flask, jsonify
+from flask import Flask
+import datetime
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET"])
-def hello():
-    return jsonify({"message": "Hello from Flask on Vercel!"})
+@app.route('/')
+def home():
+    return f'Hello, World! j2 {datetime.datetime.now()}'
 
-def handler(request, *args, **kwargs):
-    return app(request, *args, **kwargs)
+@app.route('/about')
+def about():
+    return 'About'
