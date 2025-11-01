@@ -9,4 +9,4 @@ def home():
 
 @app.route('/about')
 def about():
-    return f'About {datetime.datetime.now()}'
+    return f'About {datetime.datetime.now()} | this is 1102'
